@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{ asset('penjual/css/style.css') }}">
     <!-- endinject -->
     <link rel="shortcut icon" href="{{ asset('penjual/images/favicon.png') }}" />
+    @livewireStyles
 </head>
 
 <body>
@@ -55,6 +56,7 @@
     <script src="{{ asset('penjual/js/data-table.js') }}"></script>
     <script src="{{ asset('penjual/js/jquery.dataTables.js') }}"></script>
     <script src="{{ asset('penjual/js/dataTables.bootstrap4.js') }}"></script>
+    @livewireScripts
 
 </body>
 
