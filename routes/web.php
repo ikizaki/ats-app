@@ -52,6 +52,8 @@ Route::prefix('penjual')->middleware(['auth', 'isPenjual'])->group(function () {
 
 Route::controller(App\Http\Controllers\Pembeli\PembeliController::class)->group(function () {
     Route::get('/', 'index');
+    Route::get('/allproducts', 'allProducts');
     Route::get('/collections', 'categories');
 	Route::get('/collections/{category_slug}', 'products');
+	Route::get('/collections/{category_slug}/{product_slug}', 'productView');
 });

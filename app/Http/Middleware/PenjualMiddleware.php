@@ -18,7 +18,7 @@ class PenjualMiddleware
     public function handle(Request $request, Closure $next)
     {
         if(!Auth::user()->role_as == '1'){
-            return redirect('/home')->with('status', 'Akses ditolak, Hanya untuk penjual!');
+            return redirect('/')->with('status', 'Akses ditolak, Hanya untuk penjual!');
         }
         return $next($request);
     }
