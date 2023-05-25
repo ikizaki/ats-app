@@ -35,7 +35,7 @@ class LoginController extends Controller
             return redirect('penjual/dashboard')->with('status','Selamat Datang!');
         }
         else{
-            return redirect('/')->with('status','Login Sukses!');
+            return redirect('/home')->with('status','Login Sukses!');
         }
     }
 

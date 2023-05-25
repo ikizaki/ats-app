@@ -32,7 +32,7 @@ class PembeliController extends Controller
             return redirect('penjual/dashboard')->with('status', 'Selamat Datang!');
         } else {
             $sliders = Slider::where('status', '0')->get();
-            return view('home', compact('sliders'));
+            return view('pembeli.index', compact('sliders'));
         }
     }
 

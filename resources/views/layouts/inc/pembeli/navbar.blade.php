@@ -42,7 +42,6 @@
                                 <i class="fa fa-user"></i> {{ Auth::user()->name }}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/admin/dashboard"><i class="fa fa-user"></i> Profile</a></li>
                                 <li><a class="dropdown-item" href="#"><i class="fa fa-list"></i> My Orders</a>
                                 </li>
                                 <li><a class="dropdown-item" href="#"><i class="fa fa-heart"></i> My Wishlist</a>
@@ -81,7 +80,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/') }}">Home</a>
+                        <a class="nav-link" href="{{ url('/home') }}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/collections') }}">All Categories</a>

@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::prefix('penjual')->middleware(['auth', 'isPenjual'])->group(function () {
     Route::get('dashboard', [App\Http\Controllers\Penjual\PenjualController::class, 'index']);
@@ -51,7 +51,7 @@ Route::prefix('penjual')->middleware(['auth', 'isPenjual'])->group(function () {
 });
 
 Route::controller(App\Http\Controllers\Pembeli\PembeliController::class)->group(function () {
-    Route::get('/', 'index');
+    Route::get('/home', 'index');
     Route::get('/allproducts', 'allProducts');
     Route::get('/collections', 'categories');
 	Route::get('/collections/{category_slug}', 'products');
